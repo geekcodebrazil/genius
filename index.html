@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressor de Imagem Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <div class="app-container">
+            <h1><span class="text-geek">Compressor</span> de <span class="text-code">Imagem</span> Online</h1>
+            <p>Selecione uma imagem para comprimir e otimizar para a web.</p>
+
+            <label for="imageUpload" class="custom-file-upload">
+                Escolher Imagem
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+
+            <canvas id="previewCanvas" style="display:none;"></canvas>
+
+            <div id="output">
+                <p id="tamanhoOriginal"></p>
+                <p id="tamanhoComprimido"></p>
+                <a id="downloadLink" style="display: none;" download="imagem-comprimida.jpg">Baixar Imagem Comprimida</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/../politica.html" target="_blank">Política de Privacidade</a>
+            <span>|</span>
+            <a href="/../servicos.html" target="_blank">Nossos Serviços</a>
+            <span>|</span>
+            <a href="/../sobre.html" target="_blank">Sobre Nós</a>
+            <span>|</span>
+            <a href="/../termos.html" target="_blank">Termos de Uso</a>
+            <span>|</span>
+            <a href="/../tutorial.html" target="_blank">Tutorial</a>
+            <span>|</span>
+            <a href="/../index.html" target="_blank">Início</a>
+        </div>
+        <p class="footer-copyright">&copy; 2024 Compressor de Imagem. Feito com <span class="heart">❤</span>︎.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* 🛠️ Reset e Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌌 Tema Escuro com Cores Vibrantes */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Diagonal gradient */
+  color: #e0e0ff; /* Texto padrão: tom claro com leve matiz azul/roxo */
+  line-height: 1.6;
+}
+
+/* 📐 Layout Responsivo com Flexbox */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px 0; /* Vertical padding for main content area */
+}
+
+/* 🧱 Componentes Base */
+/* 🔲 Container Principal */
+.app-container {
+  width: 100%;
+  max-width: 600px; /* Original max-width, guide suggested 500px */
+  padding: 30px;
+  background-color: rgba(40, 42, 54, 0.85); /* Dracula bg with alpha: #282a36 */
+  border-radius: 10px; /* Slightly more rounded */
+  border: 1px solid #44475a; /* Cinza escuro */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px; /* Add margin for smaller screens */
+}
+
+/* 🏁 Cabeçalho */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #bd93f9; /* Roxo claro */
+  font-size: 2em; /* Adjusted size */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+h1 .text-geek {
+  color: #50fa7b; /* Verde neon */
+}
+
+h1 .text-code {
+  color: #ff79c6; /* Rosa neon */
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: center;
+  max-width: 90%; /* Prevent long text lines in the intro */
+}
+
+/* 🔘 Botões e Inputs */
+.custom-file-upload,
+#downloadLink {
+  display: inline-block; /* Ensure block behavior for centering/margin */
+  padding: 12px 25px; /* Generoso padding */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.custom-file-upload {
+  background-color: #bd93f9; /* Roxo claro */
+  color: #1a1a2e; /* Dark text for contrast */
+  margin-bottom: 25px; /* Increased margin */
+}
+
+.custom-file-upload:hover {
+  background-color: #ae80e9; /* Darker Roxo */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(189, 147, 249, 0.3);
+}
+
+#downloadLink {
+  background-color: #50fa7b; /* Verde neon */
+  color: #1a1a2e; /* Dark text for contrast */
+  margin-top: 20px;
+}
+
+#downloadLink:hover {
+  background-color: #40e068; /* Darker Verde */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(80, 250, 123, 0.3);
+}
+
+/* 🎮 Áreas Funcionais */
+canvas#previewCanvas {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #44475a; /* Cinza escuro, slightly thicker */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #282a36; /* Dark bg for canvas area if image is transparent */
+}
+
+#output {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#output p {
+  color: #e0e0ff;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+#output p:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+/* 📎 Footer */
+.site-footer {
+  flex-shrink: 0; /* Fixar no final */
+  width: 100%;
+  padding: 25px 20px; /* More padding */
+  background-color: rgba(22, 33, 62, 0.7); /* Darker semi-transparent footer bg */
+  text-align: center;
+  font-size: 0.85em; /* Smaller font */
+  border-top: 1px solid #44475a;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow links to wrap on small screens */
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ff79c6; /* Rosa neon */
+  text-decoration: none;
+  margin: 5px 10px; /* Spacing for wrapped items */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f1fa8c; /* Amarelo claro */
+  transform: translateY(-1px);
+}
+
+.footer-links span {
+  color: #6272a4; /* Cinza para separadores */
+  margin: 5px 5px;
+  user-select: none; /* Prevent selection of separators */
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    color: #bd93f9; /* Roxo claro for copyright */
+    margin-top: 10px;
+}
+
+.footer-copyright .heart {
+    color: #ff79c6; /* Pink heart */
+    font-size: 1.2em;
+}
+
+
+/* 📏 Responsividade */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px;
+    margin: 20px; /* Ensure margin on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .custom-file-upload,
+  #downloadLink {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+
+  .footer-links a, .footer-links span {
+    margin: 5px 8px; /* Adjust spacing for smaller screens */
+  }
+}
+
+@media (max-width: 480px) { /* Changed 400px to 480px for a common breakpoint */
+  h1 {
+    font-size: 1.6em;
+  }
+  
+  .app-container {
+    padding: 15px;
+    margin: 15px 10px;
+  }
+
+  .custom-file-upload,
+  #downloadLink {
+    width: 90%; /* Make buttons take more width */
+    padding: 12px 15px; /* Adjust padding for full-width feel */
+  }
+  
+  .footer-links {
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .footer-links a,
+  .footer-links span {
+    margin: 6px 0; /* Vertical spacing */
+  }
+  .footer-links span {
+    display: none; /* Hide separators when stacked */
+  }
+}
